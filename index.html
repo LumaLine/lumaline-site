@@ -6,17 +6,12 @@
   <title>LumaLine – Renewable Train Project</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to bottom, #0d3b2e, #0b2f26);
-      color: #f3e2c2;
-      line-height: 1.6;
+      color: #d4b17f;
+      margin: 0;
+      padding: 0;
     }
 
     nav {
@@ -26,9 +21,6 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #1f4e3e;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     nav img {
@@ -39,6 +31,8 @@
       list-style: none;
       display: flex;
       gap: 25px;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li a {
@@ -52,7 +46,7 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
       padding: 60px 20px;
       text-align: center;
@@ -60,17 +54,18 @@
 
     .logo {
       width: 160px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     h1 {
       font-size: 2.8em;
-      color: #e4cda4;
       margin-bottom: 20px;
+      color: #e4cda4;
     }
 
     p {
       font-size: 1.15em;
+      line-height: 1.8;
       color: #f3e2c2;
       margin-bottom: 30px;
     }
@@ -84,7 +79,7 @@
       border-radius: 6px;
       cursor: pointer;
       margin: 10px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
       text-decoration: none;
       display: inline-block;
     }
@@ -100,46 +95,30 @@
 
     iframe {
       width: 100%;
-      max-width: 100%;
       height: 600px;
       border: none;
       border-radius: 10px;
     }
 
-    .highlight-section {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-left: 4px solid #27ae60;
-      padding: 30px;
-      margin: 60px 0 40px;
-      border-radius: 10px;
+    .fallback-link {
+      margin-top: 15px;
+      display: none;
+      font-size: 0.95em;
+      color: #ffc;
+    }
+
+    .fallback-link a {
+      color: #9fffcf;
+      text-decoration: underline;
     }
 
     footer {
       background: #0b2f26;
       color: #c5a46c;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       font-size: 0.9em;
       border-top: 1px solid #1f4e3e;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .container {
-        padding: 40px 15px;
-      }
-
-      h1 {
-        font-size: 2.2em;
-      }
-
-      iframe {
-        height: 400px;
-      }
     }
   </style>
 </head>
@@ -158,27 +137,29 @@
 
     <h1>Welcome to LumaLine</h1>
     <p>
-      LumaLine is a visionary graduation project dedicated to redefining the future of sustainable transportation in line with 
-      <strong>Saudi Vision 2030</strong> and the <strong>Saudi Green Initiative</strong>. By leveraging solar energy to power high-speed rail, 
-      we present a bold, scalable solution to reduce emissions and revolutionize mobility across the Kingdom.
+      LumaLine is an innovative graduation project that tackles one of the most pressing challenges of our era — sustainable transportation.
+      By harnessing the power of solar energy, LumaLine reimagines how trains can operate cleanly, efficiently, and independently from fossil fuels.
+      <br><br>
+      Our mission directly aligns with the goals of <strong>Saudi Vision 2030</strong> and the <strong>Saudi Green Initiative</strong>, both of which aim to reduce carbon emissions, diversify the economy, and transition toward clean energy.
+      LumaLine offers a realistic, scalable solution that could drastically reshape the future of transport in Saudi Arabia and beyond.
     </p>
 
-    <button class="button" onclick="togglePresentation()">Watch Our Presentation</button>
+    <button class="button" onclick="handlePresentation()">Watch Our Presentation</button>
 
     <div id="presentation-container">
       <iframe 
-        src="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000" 
-        allowfullscreen>
-      </iframe>
+        id="presentation-frame"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000"
+        allowfullscreen
+        onerror="showFallback()"
+      ></iframe>
     </div>
 
-    <div class="highlight-section">
-      <h2 style="color:#e4cda4;">Discover Our Prototype</h2>
-      <p>
-        Dive into the technical side of LumaLine — see how our solar-powered train functions, explore interactive physics and energy simulators, and
-        understand the real-world science behind our innovation.
-      </p>
-      <a href="prototype.html" class="button">Explore the Prototype</a>
+    <div id="fallback" class="fallback-link">
+      Having trouble viewing the presentation? 
+      <a href="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000" target="_blank">
+        Click here to open it in a new tab
+      </a>.
     </div>
 
     <div style="margin-top: 40px;">
@@ -192,9 +173,27 @@
   </footer>
 
   <script>
-    function togglePresentation() {
+    function handlePresentation() {
+      const isMobile = window.innerWidth < 768;
       const container = document.getElementById('presentation-container');
-      container.style.display = container.style.display === 'none' ? 'block' : 'none';
+      const fallback = document.getElementById('fallback');
+
+      if (isMobile) {
+        window.open("https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000", "_blank");
+      } else {
+        container.style.display = 'block';
+        fallback.style.display = 'none'; // reset in case already shown
+        setTimeout(() => {
+          const frame = document.getElementById('presentation-frame');
+          if (!frame || !frame.contentDocument) {
+            showFallback();
+          }
+        }, 4000); // Wait 4s to allow loading
+      }
+    }
+
+    function showFallback() {
+      document.getElementById('fallback').style.display = 'block';
     }
   </script>
 </body>
