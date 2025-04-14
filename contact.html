@@ -1,79 +1,70 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – LumaLine</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #0d3b2e, #0b2f26);
-      color: #d4b17f;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0d3b2e, #0b2f26);
+      color: #f3e2c2;
+    }
     nav {
+      position: sticky;
+      top: 0;
       background-color: #0b2f26;
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #1f4e3e;
+      z-index: 1000;
     }
-
     nav img {
       height: 50px;
     }
-
     nav ul {
       list-style: none;
       display: flex;
       gap: 25px;
-      margin: 0;
-      padding: 0;
     }
-
     nav ul li a {
       color: #d4b17f;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav ul li a:hover {
       color: #ffffff;
     }
-
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 60px 20px;
       text-align: center;
     }
-
     h1 {
       font-size: 2.5em;
       margin-bottom: 20px;
       color: #e4cda4;
     }
-
-    .contact-card {
-      background-color: #103d2e;
-      border: 1px solid #1f4e3e;
-      border-radius: 10px;
-      padding: 20px;
+    .member {
       margin: 20px 0;
-      color: #f3e2c2;
+      font-size: 1.1em;
     }
-
     footer {
       background: #0b2f26;
       color: #c5a46c;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 0.9em;
-      border-top: 1px solid #1f4e3e;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -88,23 +79,15 @@
   </nav>
 
   <div class="container">
-    <h1>Contact Us</h1>
-    <div class="contact-card">
-      <strong>Mahmoud Motaz Meghawry</strong><br>
-      📞 +966540455673
-    </div>
-    <div class="contact-card">
-      <strong>Youssef Mohamed Rizk</strong><br>
-      📞 +966561567991
-    </div>
-    <div class="contact-card">
-      <strong>Malek Mohamed Elsaadni</strong><br>
-      📞 +966535357455
-    </div>
+    <h1>Contact Our Team</h1>
+    <div class="member">Mahmoud Motaz Meghawry – <strong>+966540455673</strong></div>
+    <div class="member">Youssef Mohamed Rizk – <strong>+966561567991</strong></div>
+    <div class="member">Malek Mohamed Elsaadni – <strong>+966535357455</strong></div>
+    <p style="margin-top: 40px;">Feel free to reach out to us with any questions, collaboration proposals, or feedback on our solar-powered train initiative.</p>
   </div>
 
   <footer>
-    © 2025 LumaLine · Driven by Nature. Designed for the Future.
+    © 2025 LumaLine · Get in Touch. Let's Build the Future Together.
   </footer>
 </body>
 </html>
