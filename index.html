@@ -18,24 +18,23 @@
       background-color: #0b2f26;
       padding: 15px 20px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #1f4e3e;
+      flex-wrap: wrap;
     }
 
     nav img {
-      height: 50px;
-      margin-bottom: 10px;
+      height: 45px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
       gap: 20px;
-      margin: 0;
+      margin: 10px 0;
       padding: 0;
+      flex-wrap: wrap;
     }
 
     nav ul li a {
@@ -61,14 +60,14 @@
     }
 
     h1 {
-      font-size: 2.2em;
+      font-size: 2.4em;
       margin-bottom: 20px;
       color: #e4cda4;
     }
 
     p {
-      font-size: 1.05em;
-      line-height: 1.7;
+      font-size: 1.1em;
+      line-height: 1.8;
       color: #f3e2c2;
       margin-bottom: 30px;
     }
@@ -76,7 +75,7 @@
     .button {
       background-color: #27ae60;
       color: white;
-      padding: 14px 25px;
+      padding: 12px 25px;
       font-size: 1em;
       border: none;
       border-radius: 6px;
@@ -91,14 +90,22 @@
       background-color: #219150;
     }
 
-    #presentation-container {
+    .embed-container {
       display: none;
+      position: relative;
+      padding-top: 56.25%;
+      height: 0;
+      overflow: hidden;
       margin-top: 30px;
+      border-radius: 10px;
     }
 
-    iframe {
+    .embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 60vh;
+      height: 100%;
       border: none;
       border-radius: 10px;
     }
@@ -112,7 +119,15 @@
       border-top: 1px solid #1f4e3e;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .logo {
+        width: 100px;
+      }
+
       nav {
         flex-direction: column;
         align-items: flex-start;
@@ -120,21 +135,8 @@
 
       nav ul {
         flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
-        width: 100%;
-      }
-
-      .container {
-        padding: 30px 15px;
-      }
-
-      h1 {
-        font-size: 1.8em;
-      }
-
-      .button {
-        width: 100%;
-        box-sizing: border-box;
       }
     }
   </style>
@@ -154,18 +156,16 @@
 
     <h1>Welcome to LumaLine</h1>
     <p>
-      LumaLine is an innovative graduation project that tackles one of the most pressing challenges of our era — sustainable transportation.
-      By harnessing the power of solar energy, LumaLine reimagines how trains can operate cleanly, efficiently, and independently from fossil fuels.
-      <br><br>
-      Our mission directly aligns with the goals of <strong>Saudi Vision 2030</strong> and the <strong>Saudi Green Initiative</strong>, both of which aim to reduce carbon emissions, diversify the economy, and transition toward clean energy.
-      LumaLine offers a realistic, scalable solution that could drastically reshape the future of transport in Saudi Arabia and beyond.
+      LumaLine is an innovative graduation project tackling sustainable transportation. By harnessing solar power, we propose a cleaner,
+      more efficient train system. Our vision supports <strong>Saudi Vision 2030</strong> and the <strong>Saudi Green Initiative</strong>,
+      promoting reduced emissions, renewable energy, and a cleaner future for Saudi Arabia.
     </p>
 
-    <button class="button" onclick="handlePresentation()">Watch Our Presentation</button>
+    <button class="button" onclick="togglePresentation()">Watch Our Presentation</button>
 
-    <div id="presentation-container">
+    <div id="presentation-container" class="embed-container">
       <iframe 
-        src="https://docs.google.com/presentation/d/13K94jlL9KcoBO4oF0lY6tM6OqucgeBnS/present" 
+        src="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pubembed?start=true&loop=false&delayms=3000"
         allowfullscreen>
       </iframe>
     </div>
@@ -181,15 +181,10 @@
   </footer>
 
   <script>
-    function handlePresentation() {
-      const isMobile = window.innerWidth <= 768;
+    function togglePresentation() {
       const container = document.getElementById('presentation-container');
-
-      if (isMobile) {
-        window.open('https://docs.google.com/presentation/d/13K94jlL9KcoBO4oF0lY6tM6OqucgeBnS/present', '_blank');
-      } else {
-        container.style.display = container.style.display === 'block' ? 'none' : 'block';
-      }
+      container.style.display = container.style.display === 'none' ? 'block' : 'none';
+      container.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 </body>
