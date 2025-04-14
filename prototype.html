@@ -1,76 +1,89 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prototype – LumaLine</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #0d3b2e, #0b2f26);
-      color: #d4b17f;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0d3b2e, #0b2f26);
+      color: #f3e2c2;
+    }
     nav {
+      position: sticky;
+      top: 0;
       background-color: #0b2f26;
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #1f4e3e;
+      z-index: 1000;
     }
-
     nav img {
       height: 50px;
     }
-
     nav ul {
       list-style: none;
       display: flex;
       gap: 25px;
-      margin: 0;
-      padding: 0;
     }
-
     nav ul li a {
       color: #d4b17f;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav ul li a:hover {
       color: #ffffff;
     }
-
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 60px 20px;
-      text-align: center;
     }
-
     h1 {
       font-size: 2.5em;
       margin-bottom: 20px;
       color: #e4cda4;
+      text-align: center;
     }
-
     p {
       font-size: 1.1em;
       line-height: 1.8;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
-
+    .diagram {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .diagram img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    iframe.simulation {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
     footer {
       background: #0b2f26;
       color: #c5a46c;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 0.9em;
-      border-top: 1px solid #1f4e3e;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -87,22 +100,40 @@
   <div class="container">
     <h1>Our Solar-Powered Train Prototype</h1>
     <p>
-      The LumaLine prototype is a small-scale solar-powered train built to demonstrate how renewable energy can efficiently power rail systems. 
-      Our model includes a photovoltaic panel mounted on the roof to capture solar energy, which is then stored in a battery system that powers the motor.
+      The LumaLine prototype showcases a scaled version of our solar-powered train concept. We engineered this model to demonstrate how solar panels can power electric motors efficiently and sustainably.
+    </p>
+    <div class="diagram">
+      <img src="prototype-diagram.png" alt="Prototype Diagram">
+      <p style="margin-top: 10px; font-style: italic;">Simplified Diagram of the Energy Flow in the LumaLine Train</p>
+    </div>
+    <p>
+      Using photovoltaic cells, stored energy charges onboard batteries which drive the motor and wheels. We calculated the torque, force, and energy transfer using the following physics equations:
     </p>
     <p>
-      The design simulates real-world energy cycles and mimics onboard energy conversion and storage systems that would be required in full-size trains.
-      The key mathematical and physical concepts include energy conversion efficiency, power output calculations (P = IV), battery capacity estimation,
-      and kinematic modeling of train motion under load.
+      \[ P = V \times I \quad \text{(Electrical Power)} \]<br />
+      \[ F = ma \quad \text{(Newton's Second Law)} \]<br />
+      \[ \tau = r \times F \quad \text{(Torque)} \]<br />
+      \[ E = P \times t \quad \text{(Energy Used)} \]
     </p>
     <p>
-      This prototype proves that a larger-scale implementation of solar trains is not only possible but also practical — especially in a sun-rich country like Saudi Arabia.
-      With adequate investment and engineering, solar trains can reduce national reliance on fossil fuels, lower emissions, and support the Vision 2030 and the Saudi Green Initiative goals.
+      These formulas allowed us to optimize the weight-to-power ratio and efficiency. We also modeled the solar energy output:
     </p>
+    <p>
+      \[ E_{solar} = A \cdot r \cdot H \cdot PR \quad \text{where:} \]<br />
+      \[ A = \text{panel area}, \; r = \text{panel efficiency}, \; H = \text{solar irradiance}, \; PR = \text{performance ratio} \]
+    </p>
+
+    <h2>Interactive Physics Simulation</h2>
+    <p>Explore the force and acceleration acting on the train prototype using this embedded simulation:</p>
+    <iframe class="simulation" src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html" allowfullscreen></iframe>
+
+    <h2>Solar Panel Output Simulator</h2>
+    <p>This simulation lets you see how solar panel area, sunlight, and efficiency affect power generation:</p>
+    <iframe class="simulation" src="https://phet.colorado.edu/sims/html/solar-energy/latest/solar-energy_en.html" allowfullscreen></iframe>
   </div>
 
   <footer>
-    © 2025 LumaLine · Powered by Innovation. Built for Sustainability.
+    © 2025 LumaLine · Powered by Science. Designed for the Future.
   </footer>
 </body>
 </html>
