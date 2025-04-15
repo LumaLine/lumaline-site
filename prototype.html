@@ -56,6 +56,16 @@
       color: #e4cda4;
       text-align: center;
     }
+    h2 {
+      margin-top: 40px;
+      color: #e4cda4;
+      border-bottom: 1px solid #d4b17f;
+      padding-bottom: 10px;
+    }
+    h3 {
+      margin-top: 30px;
+      color: #f3e2c2;
+    }
     p {
       font-size: 1.1em;
       line-height: 1.8;
@@ -93,27 +103,89 @@
   <div class="container">
     <h1>Our Solar-Powered Train Prototype</h1>
     <p>
-      The LumaLine prototype showcases a scaled version of our solar-powered train concept. We engineered this model to demonstrate how solar panels can power electric motors efficiently and sustainably.
+      Our prototype is a practical demonstration of harnessing solar power to propel a fully electric train. The project integrates scientific principles with real-world engineering challenges, offering a glimpse into the potential for sustainable public transport solutions aligned with Saudi Vision 2030.
+    </p>
+
+    <div class="diagram">
+      <img src="prototype-diagram.png" alt="Solar Train System Diagram">
+      <p style="margin-top: 10px; font-style: italic;">Diagram of the Solar-Powered Train System</p>
+    </div>
+
+    <h2>The Science Behind the Prototype</h2>
+
+    <h3>Photoelectric Effect</h3>
+    <p>
+      The <strong>photoelectric effect</strong> forms the foundation of solar panel technology. Photons strike the surface of a semiconductor, releasing electrons and generating electric current:
+    </p>
+    <p>
+      \[ E_k = hf - \phi \]<br />
+      where:
+      <ul>
+        <li>\( E_k \): Kinetic energy of the emitted electron</li>
+        <li>\( h \): Planck’s constant</li>
+        <li>\( f \): Frequency of incident light</li>
+        <li>\( \phi \): Work function (energy required to release the electron)</li>
+      </ul>
     </p>
     <div class="diagram">
-      <img src="prototype-diagram.png" alt="Prototype Diagram">
-      <p style="margin-top: 10px; font-style: italic;">Simplified Diagram of the Energy Flow in the LumaLine Train</p>
+      <img src="photoelectric-diagram.png" alt="Photoelectric Effect Diagram">
+      <p style="margin-top: 10px; font-style: italic;">Scientific Illustration of the Photoelectric Effect</p>
     </div>
+
+    <h3>Physics Equations Used</h3>
     <p>
-      Using photovoltaic cells, stored energy charges onboard batteries which drive the motor and wheels. We calculated the torque, force, and energy transfer using the following physics equations:
+      Several essential physics equations are applied in the prototype's design:
     </p>
     <p>
-      \[ P = V \times I \quad \text{(Electrical Power)} \]<br />
+      \[ P = V \times I \quad \text{(Electric Power)} \]<br />
       \[ F = ma \quad \text{(Newton's Second Law)} \]<br />
       \[ \tau = r \times F \quad \text{(Torque)} \]<br />
-      \[ E = P \times t \quad \text{(Energy Used)} \]
+      \[ E = P \times t \quad \text{(Energy)} \]
     </p>
     <p>
-      These formulas allowed us to optimize the weight-to-power ratio and efficiency. We also modeled the solar energy output:
+      To calculate solar energy production:
     </p>
     <p>
-      \[ E_{solar} = A \cdot r \cdot H \cdot PR \quad \text{where:} \]<br />
-      \[ A = \text{panel area}, \; r = \text{panel efficiency}, \; H = \text{solar irradiance}, \; PR = \text{performance ratio} \]
+      \[ E_{\text{solar}} = A \cdot r \cdot H \cdot PR \]<br />
+      where:
+      <ul>
+        <li>\( A \): Area of the solar panel</li>
+        <li>\( r \): Efficiency of the panel</li>
+        <li>\( H \): Solar irradiance (sunlight power per unit area)</li>
+        <li>\( PR \): Performance ratio (accounts for system losses)</li>
+      </ul>
+    </p>
+
+    <h3>Calculus for Performance Optimization</h3>
+    <p>
+      Calculus helps us optimize power output:
+    </p>
+    <p>
+      \[ P(t) = V(t) \cdot I(t) \quad \Rightarrow \quad \frac{dP}{dt} = V(t) \cdot \frac{dI}{dt} + I(t) \cdot \frac{dV}{dt} \]<br />
+      where:
+      <ul>
+        <li>\( V(t) \): Voltage over time</li>
+        <li>\( I(t) \): Current over time</li>
+        <li>\( \frac{dP}{dt} \): Rate of change of power</li>
+      </ul>
+    </p>
+    <p>
+      To minimize energy loss due to resistance:
+      \[ P_{\text{loss}} = I^2 R \]
+    </p>
+    <p>
+      Total energy output over time:
+      \[ E_{\text{total}} = \int_{0}^{T} P(t) \, dt \]<br />
+      where:
+      <ul>
+        <li>\( T \): Total time period</li>
+        <li>\( P(t) \): Instantaneous power at time \( t \)</li>
+      </ul>
+    </p>
+
+    <h2>Scalability and Future Potential</h2>
+    <p>
+      This prototype demonstrates that solar energy can be practically applied to transportation systems. With increased scale and refinement, such technology can power larger electric trains for regional transit—contributing to carbon neutrality and sustainable development in line with Vision 2030 and the Saudi Green Initiative.
     </p>
   </div>
 
