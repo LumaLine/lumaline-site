@@ -2,123 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LumaLine – Renewable Train Project</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LumaLine – Solar-Powered Train</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     body {
+      margin: 0;
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to bottom, #0d3b2e, #0b2f26);
-      color: #d4b17f;
-      margin: 0;
-      padding: 0;
+      color: #f3e2c2;
     }
-
     nav {
-      background-color: #0b2f26;
-      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      background: #0b2f26;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 15px 30px;
       border-bottom: 1px solid #1f4e3e;
+      z-index: 1000;
     }
-
     nav img {
       height: 50px;
     }
-
     nav ul {
       list-style: none;
       display: flex;
       gap: 25px;
-      margin: 0;
-      padding: 0;
     }
-
     nav ul li a {
       color: #d4b17f;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav ul li a:hover {
-      color: #ffffff;
+      color: white;
     }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
+    .hero {
       text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to bottom, #0d3b2e, #0b2f26);
     }
-
-    .logo {
-      width: 160px;
-      margin-bottom: 20px;
+    .hero h1 {
+      font-size: 3em;
+      color: #e4cda4;
     }
-
-    h1 {
-      font-size: 2.8em;
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    .highlight-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    .highlight-section h2 {
+      font-size: 2em;
       margin-bottom: 20px;
       color: #e4cda4;
     }
-
-    p {
-      font-size: 1.15em;
-      line-height: 1.8;
-      color: #f3e2c2;
-      margin-bottom: 30px;
+    .highlight-section p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
-
-    .button {
-      background-color: #27ae60;
-      color: white;
-      padding: 15px 30px;
-      font-size: 1em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin: 10px;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      display: inline-block;
+    .iframe-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.1);
     }
-
-    .button:hover {
-      background-color: #219150;
-    }
-
-    #presentation-container {
-      display: none;
-      margin-top: 30px;
-    }
-
-    iframe {
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 600px;
+      height: 100%;
       border: none;
-      border-radius: 10px;
     }
-
-    .fallback-link {
-      margin-top: 15px;
-      display: none;
-      font-size: 0.95em;
-      color: #ffc;
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #d4b17f;
+      color: #0b2f26;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-
-    .fallback-link a {
-      color: #9fffcf;
-      text-decoration: underline;
+    .cta-button:hover {
+      background-color: #e8c995;
     }
-
     footer {
-      background: #0b2f26;
-      color: #c5a46c;
       text-align: center;
-      padding: 15px;
+      padding: 30px;
+      background: #0b2f26;
       font-size: 0.9em;
-      border-top: 1px solid #1f4e3e;
+      color: #c5a46c;
     }
   </style>
 </head>
@@ -128,73 +112,66 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="prototype.html">Prototype</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="container">
-    <img src="lumaline-logo.png" alt="LumaLine Logo" class="logo">
-
+  <section class="hero">
     <h1>Welcome to LumaLine</h1>
+    <p>Revolutionizing Transportation with Solar Energy – Aligned with Saudi Vision 2030</p>
+  </section>
+
+  <section class="highlight-section">
+    <h2>Explore Our Prototype</h2>
     <p>
-      LumaLine is an innovative graduation project that tackles one of the most pressing challenges of our era — sustainable transportation.
-      By harnessing the power of solar energy, LumaLine reimagines how trains can operate cleanly, efficiently, and independently from fossil fuels.
-      <br><br>
-      Our mission directly aligns with the goals of <strong>Saudi Vision 2030</strong> and the <strong>Saudi Green Initiative</strong>, both of which aim to reduce carbon emissions, diversify the economy, and transition toward clean energy.
-      LumaLine offers a realistic, scalable solution that could drastically reshape the future of transport in Saudi Arabia and beyond.
+      Our working model demonstrates how solar energy can be effectively used to power trains, marking a step forward in sustainable transportation. From physics principles to calculus optimization and energy calculations, the project merges theory with practical application.
     </p>
+    <a class="cta-button" href="prototype.html">Learn More About the Prototype</a>
+  </section>
 
-    <button class="button" onclick="handlePresentation()">Watch Our Presentation</button>
-
-    <div id="presentation-container">
-      <iframe 
-        id="presentation-frame"
-        src="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000"
-        allowfullscreen
-        onerror="showFallback()"
-      ></iframe>
+  <section class="highlight-section">
+    <h2>Watch the Presentation</h2>
+    <p>
+      For a detailed walkthrough of the concept, design, and vision behind LumaLine, check out our official presentation.
+    </p>
+    <div class="iframe-wrapper" id="presentationContainer">
+      <iframe id="presentationEmbed"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pubembed?start=true&loop=false&delayms=3000"
+        allowfullscreen></iframe>
     </div>
-
-    <div id="fallback" class="fallback-link">
-      Having trouble viewing the presentation? 
-      <a href="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000" target="_blank">
-        Click here to open it in a new tab
-      </a>.
+    <div style="text-align:center; margin-top:15px;">
+      <a class="cta-button" href="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000" target="_blank">
+        Open Presentation in New Tab
+      </a>
     </div>
-
-    <div style="margin-top: 40px;">
-      <a href="https://www.vision2030.gov.sa/" target="_blank" class="button" style="background-color:#1a936f;">Learn About Vision 2030</a>
-      <a href="https://www.greeninitiatives.gov.sa/" target="_blank" class="button" style="background-color:#1a936f;">Saudi Green Initiative</a>
-    </div>
-  </div>
+  </section>
 
   <footer>
-    © 2025 LumaLine · Powered by Innovation. Built for Sustainability.
+    © 2025 LumaLine · All Rights Reserved
   </footer>
 
   <script>
-    function handlePresentation() {
-      const isMobile = window.innerWidth < 768;
-      const container = document.getElementById('presentation-container');
-      const fallback = document.getElementById('fallback');
+    function isMobileDevice() {
+      return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+    }
 
-      if (isMobile) {
+    window.addEventListener('load', () => {
+      const iframe = document.getElementById("presentationEmbed");
+      if (isMobileDevice()) {
         window.open("https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000", "_blank");
+        document.getElementById("presentationContainer").style.display = "none";
       } else {
-        container.style.display = 'block';
-        fallback.style.display = 'none'; // reset in case already shown
-        setTimeout(() => {
-          const frame = document.getElementById('presentation-frame');
-          if (!frame || !frame.contentDocument) {
-            showFallback();
-          }
-        }, 4000); // Wait 4s to allow loading
+        // Optional: if iframe fails to load, offer backup link
+        iframe.onerror = () => {
+          document.getElementById("presentationContainer").innerHTML = `
+            <p style="color: #ffccaa; text-align: center;">
+              Failed to load presentation. 
+              <a href="https://docs.google.com/presentation/d/e/2PACX-1vR70cH2ov_ubFw8inYWqKZwJxNSjPegiEZTRUgZ3FNMpAAiTt_S45kmlpdilRNQHQ/pub?start=true&loop=false&delayms=3000" target="_blank" style="color:#ffd58f;">Click here to view it in a new tab.</a>
+            </p>
+          `;
+        };
       }
-    }
-
-    function showFallback() {
-      document.getElementById('fallback').style.display = 'block';
-    }
+    });
   </script>
 </body>
 </html>
